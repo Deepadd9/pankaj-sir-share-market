@@ -84,7 +84,8 @@ body {
     opacity: 0.9;
 }
 
-.cta-button {
+.cta-button, .telegram-button-large {
+    display: inline-block;
     background-color: #ffd700;
     color: #333;
     padding: 15px 40px;
@@ -95,9 +96,10 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
-.cta-button:hover {
+.cta-button:hover, .telegram-button-large:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
@@ -124,6 +126,37 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Stats Section */
+.stats {
+    background: white;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 1.1rem;
+    color: #666;
 }
 
 /* About Section */
@@ -351,6 +384,29 @@ body {
     font-weight: bold;
 }
 
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-section .cta-button {
+    background-color: #ffd700;
+    color: #333;
+}
+
 /* Footer */
 .footer {
     background: #333;
@@ -398,7 +454,8 @@ body {
 
     .services h2,
     .about h2,
-    .testimonials h2 {
+    .testimonials h2,
+    .cta-section h2 {
         font-size: 2rem;
     }
 }
@@ -409,7 +466,8 @@ body {
     }
 
     .cta-button,
-    .telegram-button {
+    .telegram-button,
+    .telegram-button-large {
         padding: 12px 30px;
         font-size: 1rem;
     }
@@ -421,5 +479,14 @@ body {
 
     .nav-links {
         gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .stat-card h3 {
+        font-size: 2rem;
     }
 }
